@@ -1,0 +1,206 @@
+*{
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url('../imagens/fundo.jpg') ;
+    font-family:Arial;
+    background-size: auto 100vh;
+    height: 100vh;
+    font-size: 15px;
+}
+@media (min-width: 370px) {
+    body{
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 600px) {
+    body{
+        font-size: 18px;
+    }
+}  
+/*header e menu*/
+header{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu{
+    background-color: white;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+}
+.menu a{
+    display: block;
+    padding: 10px 20px;
+    transition: background-color 1s, color 1s;
+}
+.menu a:active,
+.menu a:hover{
+    background-color: teal;
+    color: whitesmoke;
+}
+.menu li{
+  list-style:none;
+}
+.menu ul{
+  display:flex;
+  justify-content:space-around;
+}
+
+a{
+  color: teal;
+  text-decoration: none;
+  
+}
+a:hover{
+  text-decoration: underline;
+}
+.title {
+    transform: scale(0.2) translateY(50vh);
+    opacity: 0;
+    animation: 500ms ease 500ms animacaoTitulo forwards;
+  }
+  
+  @keyframes animacaoTitulo {
+    from {
+      transform: scale(0.2) translateY(50vh);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1) translateY(0);
+      opacity: 1;
+    }
+  }
+  
+.site-title{
+  text-align:center;
+  color: whitesmoke;
+}
+.site-title{
+    font-family: 'Martel', serif;
+    text-align: center;
+    font-size: 4em;
+}
+.site-subtitle{
+  text-align:center;
+  font-family: 'Martel', serif;
+  /*font-family: 'Dancing Script', cursive;*/
+  color: whitesmoke;
+}
+.title .img-1{
+    height: 280px;
+    width: 280px;
+   
+}
+.title figure{
+    text-align: center;
+}
+.Sobre,
+.Certificados,
+.contato{
+    padding: 2em;
+    min-height: 100vh;
+    
+}
+
+@media (min-width: 1200px){
+    .Sobre p{
+        max-width: 1200 ;
+        margin-left: 17em;
+        margin-right: auto;
+        
+       
+}
+}
+
+.Sobre h2,
+.Certificados h2,
+.contato h2
+{
+    font-family:  'Script', cursive;
+    color:whitesmoke;
+    margin-bottom: 1.5em;
+    font-size: 2em;
+}
+/*SECTION SOBRE*/
+.Sobre p{
+    color: white;
+    text-indent: 2em;
+    margin-bottom: 1.2em;
+    margin-right:  auto;
+    text-align: justify;
+}
+.Sobre .figperfil{
+    float: left;
+    margin-right: 2em;
+}
+.img-1{
+    height: 400px;
+    width: 360px;
+    border-radius: 50%;
+}
+/*SECTION  CERTIFICADOS*/
+
+.Certificados .grid {
+    display: grid;
+    gap: 4em;
+  }
+  
+  @media (min-width: 560px) {
+    .Certificados .grid {
+      grid-template-columns: 260px 260px;
+    }
+  }
+  
+  @media (min-width: 880px) {
+    .Certificados .grid {
+      grid-template-columns: repeat(3, 360px);
+      align-content: center;
+      justify-content: center;
+      height: calc(100vh - 12em - 48px);
+    }
+  }
+  
+  .portfolio figure {
+
+    text-align: center;
+
+  }
+  .img-Certificados {
+    height: 280px;
+    width: 340px;
+    object-fit: cover;
+    object-position: left bottom;
+    transition: transform 500ms;
+  }
+  
+  .img-Certificados:hover {
+    transform: scale(1.2);
+  }
+  
+
+  
+/*SECTION CONTATO*/
+.contato .icons {
+    text-align: center;
+  }
+  
+  .contato a {
+    color: whitesmoke;
+    font-size: 4em;
+    transition: text-shadow 1s;
+  }
+  
+  .contato a:active,
+  .contato a:hover  {
+    text-decoration: none;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.082);
+  }
+
